@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/4101f14fd0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="FPJSB-css.css">
+    <title>Éternelle</title>
+</head>
+<body>
+    <div class="main-container bg-black ">
+        <header>
+            <div class="header_background">
+                <div>
+                    <nav class="d-flex logo">
+                        <div class="d-flex  p-3 ">
+                            <img src="text-1701412136333.png" alt="" class="w-50">
+                        </div>
+                    </nav> 
+                </div>
+                <div class="head-text">
+                    <p class="display-4 text-white text-center ls">Tower of Eternal Magic</p>
+                </div>
+            </div>
+        </header>
+        <!-- Book now -->
+        <section>
+            <div class="bg-black d-flex justify-content-center py-3 ">
+                <button class="btn bg-transparent rounded-5 text-white btn-outline-light " onclick="scrollToSection('booking-section')">Book Now</button>
+            </div>
+        </section>
+        <section>
+            <div class="bg-black py-5"></div>
+        </section>
+        <section id="booking-section" class="bg-black p-5">
+            <div>
+                <p class="display-6 text-center text-light ">Claim Your Castle: Booking Essentials</p>
+            </div>
+            <div class="book-now-form text-white pt-5 ">
+                <form onsubmit="return bookHotel(event)" autocomplete="off">
+                    <div class="mb-3">
+                        <label for="fullName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control profiles" id="fullName" placeholder="Enter your full name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="phoneNumber" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control profiles" id="phoneNumber" placeholder="Enter your phone number">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Age" class="form-label">Age</label>
+                        <input type="text" class="form-control profiles" id="Age" placeholder="Enter your Age">
+                    </div>
+                    <div class="mb-3">
+                        <label for="checkin" class="form-label">Check-in Date</label>
+                        <input type="date" class="form-control dropend dates" id="checkin" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="checkout" class="form-label">Check-out Date</label>
+                        <input type="date" class="form-control dates" id="checkout" required>
+                    </div>
+                    <div class="bg-black d-flex justify-content-center py-3">
+                        <button class="btn bg-light bg-opacity-25 rounded-3  text-white btn-outline-light "  type="submit">Book</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section id="date-range-section" class="d-none  overflow-x-hidden ">
+            <div class="py-5 px-4  ">
+                <h2 class="text-center text-light position-relative">Secrets of the Castle & Reservation History <span class="position-absolute top-100 end-0 fs-6 cp" onclick="deleteBooking()"><i class="fa-solid fa-trash"></i></span></h2>
+            </div>
+            <div class="row p-4">
+                <div class="col-sm-6 col-12">
+                    <div>
+                        <h4 class="text-center text-light position-relative ">Sorcerer's Profile <span class="position-absolute top-100 end-0 fs-6 cp" id="edit1" onclick="edit1()" ><i class="fa-solid fa-pen-to-square"></i></span></h4>
+                    </div>
+                    <div class="p-4 profile pt-5 ">
+                        <p>Name : <span id="name"></span></p>
+                        <p>PhoneNumber : <span id="phone"></span></p>
+                        <p>Age: <span id="age"></span></p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-12  border-start border-white ">
+                    <div>
+                        <h4 class="text-center text-light position-relative ">Realm's Visit Timetable<span class="position-absolute top-100 end-0 fs-6 cp" id="edit2" onclick="edit2()"><i class="fa-solid fa-pen-to-square"></i></span></h4>
+                    </div>
+                    <div class="p-4 pt-5 ">
+                        <div>
+                            <div class="d-flex justify-content-between ">
+                                <p>Check-in : <span id="check-in"></span></p>
+                                <p>Check-out : <span id="check-out"></span></p>
+                            </div>
+                            <div class="text-center py-2">
+                                <p>Total days : <span id="totalDays"></span></p>
+                            </div>
+                        </div>
+                        <div>
+                            <ul id="dateRangeList" class="list-unstyled text-white d-flex justify-content-center  flex-wrap gap-5 row-gap-4 text-center "></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="FPJSB js.js"></script>
+</body>
+</html> 

@@ -1,0 +1,39 @@
+*{
+   font-family: 'Cinzel' ,sans-serif; 
+   color: white;
+}
+.header_background{
+    background: linear-gradient(#00000033, rgba(0, 0, 0, 0.974)), url(hogwarts-castle-.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 90.6vh;
+}
+.ls{
+    letter-spacing: 10px;
+}
+.head-text{
+    padding: 20% 0 0;
+    cursor: default;
+}
+form input{
+    background-color: rgb(37, 37, 37) !important;
+    color: white !important;
+}
+form input::placeholder{
+    color: white !important;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: rgba(112, 112, 112, 0.584);
+}
+.profile p{
+    display: flex !important;
+    justify-content: space-between !important;
+}
+.cp{
+    cursor: pointer !important;
+}
+@media screen and (max-width: 576px){
+    .head-text{
+        padding: 40% 0 0 !important;
+    }
+}
